@@ -20,7 +20,8 @@ wsServer.on('connection', (websocket) => {
     console.log('Websocket connection......')
 
     websocket.on('message',(data) => {
-        console.log(`Message from client,`, data.toString())
+        console.log(`Message from client:`, data.toString())
+        websocket.send('Gilu.. Hello from server')
     })
 })
 
