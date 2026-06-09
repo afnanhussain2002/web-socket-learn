@@ -7,6 +7,14 @@
 </head>
 <body>
     <h1>WebSocket Server Demo</h1>
+    <div>
+        <input type="text"
+        placeholder="Enter your message here"
+        id="message-input"
+        />
+        <button id="message-send-button">Send</button>
+        <ul id="message-container"></ul>
+    </div>
     <script>
         const {port} = window.location;
         const connection = new WebSocket(`ws://localhost:${port}`);
