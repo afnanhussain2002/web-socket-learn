@@ -21,7 +21,10 @@ wsServer.on('connection', (websocket) => {
 
     websocket.on('message',(data) => {
         console.log(`Message from client:`, data.toString())
-        websocket.send('Gilu.. Hello from server')
+
+        wsServer.clients.forEach((client) =>{
+            client.send(data.toString());
+        })
     })
 })
 
