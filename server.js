@@ -11,6 +11,10 @@ const wsServer = new WebSocketServer({
 
 wsServer.on('connection', (websocket) => {
     console.log('Websocket connected......')
+
+    websocket.on('message',(data) => {
+        console.log(`Message from client,`, data.toString())
+    })
 })
 
 httpServer.listen(PORT, () => {
