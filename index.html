@@ -13,9 +13,15 @@
         id="message-input"
         />
         <button id="message-send-button">Send</button>
-        <ul id="message-container"></ul>
+        <ul id="messages-container"></ul>
     </div>
     <script>
+        // Dom
+
+        const messageInput = document.getElementById('message-input');
+        const messageSendButton = document.getElementById('message-send-button');
+        const messagesContainer = document.getElementById('messages-container')
+
         const {port} = window.location;
         const connection = new WebSocket(`ws://localhost:${port}`);
 
