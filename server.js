@@ -17,7 +17,7 @@ const wsServer = new WebSocketServer({
 });
 
 wsServer.on('connection', (websocket) => {
-    console.log('Websocket connected......')
+    console.log('Websocket connection......')
 
     websocket.on('message',(data) => {
         console.log(`Message from client,`, data.toString())
