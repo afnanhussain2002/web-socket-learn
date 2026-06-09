@@ -9,6 +9,10 @@ const wsServer = new WebSocketServer({
     server: httpServer
 });
 
+wsServer.on('connection', (websocket) => {
+    console.log('Websocket connected......')
+})
+
 httpServer.listen(PORT, () => {
     console.log(`Server started on http://localhost: ${PORT}`)
 })
