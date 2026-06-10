@@ -28,6 +28,14 @@
         connection.onopen = () =>{
             connection.onmessage = (message) =>{
                 console.log(`Message Received:`, message);
+
+                const rawData = message.data;
+                const parsedData = JSON.parse(rawData);
+                const text = parsedData.message;
+
+                const li = document.createElement('li');
+                li.innerText = text;
+                messagesContainer.appendChild(li)
             }
           messageSendButton.addEventListener('click', (ev) =>{
             const value = messageInput.value;
