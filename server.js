@@ -2,6 +2,7 @@ import http from 'node:http';
 import { WebSocketServer } from 'ws';
 import fs from 'node:fs/promises';
 import path from 'path';
+import {redisPublish, redisSubscribe} from './connection.js'
 
 const PORT = process.env.PORT || 9000
 
