@@ -5,12 +5,13 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev":"node --watch server.js"
+    "dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ws": "^8.21.2"
+    "ws": "^8.21.2",
+    "wscat": "^6.1.0"
   }
 }
