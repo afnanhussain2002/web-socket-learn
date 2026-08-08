@@ -19,6 +19,10 @@ wss.on('connection',(socket,request) =>{
             console.error(`Error: ${err.message}: ${ip}`)
         })
 
+        socket.on('close', () =>{
+            console.log('Client disconnected');
+        })
+
        
         })
 
